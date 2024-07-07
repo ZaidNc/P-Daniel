@@ -123,7 +123,7 @@ export default function Component() {
               <Link href="#" className="group" prefetch={false}>
                 <div className="rounded-lg overflow-hidden">
                   <img
-                    src="/placeholder.svg"
+                    src="/FastFood.jpeg"
                     width="400"
                     height="300"
                     alt="Project 1"
@@ -132,17 +132,20 @@ export default function Component() {
                 </div>
                 <div className="mt-4 text-center">
                   <h3 className="text-lg font-bold group-hover:underline">
-                    Proyecto 1
+                    FastFood App
                   </h3>
                   <p className="text-muted-foreground">
-                    Descripción del proyecto 1
+                    Se desarrollo una aplicación destinada a facilitar la compra
+                    de alimentos en varios restaurantes en una sola aplicación
+                    Tecnologías Utilizadas: Backend: Node.js, Express,
+                    PostgreSQL Frontend: React, Redux, CSS
                   </p>
                 </div>
               </Link>
               <Link href="#" className="group" prefetch={false}>
                 <div className="rounded-lg overflow-hidden">
                   <img
-                    src="/placeholder.svg"
+                    src="/FastFood.jpeg"
                     width="400"
                     height="300"
                     alt="Project 2"
@@ -161,7 +164,7 @@ export default function Component() {
               <Link href="#" className="group" prefetch={false}>
                 <div className="rounded-lg overflow-hidden">
                   <img
-                    src="/placeholder.svg"
+                    src="/FastFood.jpeg"
                     width="400"
                     height="300"
                     alt="Project 3"
