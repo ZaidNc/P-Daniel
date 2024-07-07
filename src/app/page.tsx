@@ -12,34 +12,34 @@ import {
 export default function Component() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      <header className="bg-background/80 px-4 lg:px-6 h-12 flex items-center shadow-sm rounded-xl fixed top-5 left-0 right-0 z-10 transition-all duration-300 max-w-2xl mx-auto w-full">
+      <header className="bg-primary/90 px-4 lg:px-6 h-12 flex items-center shadow-sm rounded-xl fixed top-5 left-0 right-0 z-10 transition-all duration-300 max-w-2xl mx-auto w-full">
         <Link
           href="#"
           className="flex items-center justify-center"
           prefetch={false}
         >
-          <FaMountain className="h-5 w-5" />
+          <FaMountain className="h-5 w-5 text-primary-foreground" />
           <span className="sr-only">Mi Portafolio</span>
         </Link>
         <div className="flex w-full justify-center">
           <nav className="flex gap-4 sm:gap-6">
             <Link
               href="#about"
-              className="text-sm font-medium hover:underline underline-offset-4"
+              className="text-sm font-medium hover:underline underline-offset-4 text-primary-foreground"
               prefetch={false}
             >
               Sobre mí
             </Link>
             <Link
               href="#projects"
-              className="text-sm font-medium hover:underline underline-offset-4"
+              className="text-sm font-medium hover:underline underline-offset-4 text-primary-foreground"
               prefetch={false}
             >
               Proyectos
             </Link>
             <Link
               href="#contact"
-              className="text-sm font-medium hover:underline underline-offset-4"
+              className="text-sm font-medium hover:underline underline-offset-4 text-primary-foreground"
               prefetch={false}
             >
               Contacto
@@ -49,14 +49,14 @@ export default function Component() {
         <div className="ml-auto flex gap-2">
           <Link
             href="#"
-            className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-primary text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+            className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-primary-foreground text-sm font-medium text-primary shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
             prefetch={false}
           >
             <FaGithub className="w-4 h-4" />
           </Link>
           <Link
             href="#"
-            className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-primary text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+            className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-primary-foreground text-sm font-medium text-primary shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
             prefetch={false}
           >
             <FaLinkedin className="w-4 h-4" />
