@@ -3,24 +3,10 @@ import {
   FaMountain,
   FaGithub,
   FaLinkedin,
-  FaCode,
-  FaPaintBrush,
-  FaLayerGroup,
-  FaMicrochip,
-  FaDesktop,
   FaServer,
-  FaMagic,
-  FaHtml5,
-  FaCss3Alt,
-  FaReact,
-  FaBootstrap,
-  FaNodeJs,
-  FaDatabase,
-  FaCloudUploadAlt,
-  FaFigma,
-  FaPencilAlt,
-  FaUserAlt,
-  FaGitAlt,
+  FaLaptopCode,
+  FaTools,
+  FaGreaterThan,
 } from "react-icons/fa";
 import { SiVisualstudiocode, SiPostman } from "react-icons/si";
 
@@ -78,44 +64,28 @@ export default function Component() {
           </Link>
         </div>
       </header>
-      <main className="flex-1">
-        <section id="home" className=" w-full py-12 md:py-24 lg:py-32">
-          <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
+      <main className="flex-1 pt-20">
+        <section id="home" className="w-full py-12 md:py-24 lg:py-32">
+          <div className="container grid items-center gap-4 px-4 md:px-6 lg:grid-cols-2 lg:gap-6">
             <div className="space-y-4">
-              <img
-                src="/Perfil.png"
-                width="300"
-                height="300"
-                alt="Profile"
-                className="mx-auto rounded-full w-40 h-40 object-cover"
-              />
               <div className="space-y-2 text-center lg:text-left">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                   Daniel Navarro
                 </h1>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Desarrollador Full Stak con experiencia en crear soluciones
-                  digitales atractivas y funcionales.
+                  Desarrollador Full Stak y diseñador gráfico con experiencia en
+                  crear soluciones digitales atractivas y funcionales.
                 </p>
               </div>
             </div>
-            <div className="flex flex-col gap-2 min-[400px] lg:flex-row lg:justify-end">
-              <Link
-                href="#"
-                className="inline-flex items-center justify-center bg-black bg-opacity-50 px-4 py-2 rounded-full text-white text-sm font-medium shadow transition-colors hover:bg-opacity-70 focus:outline-none focus:ring-1 focus:ring-gray-500 disabled:pointer-events-none disabled:opacity-50"
-                prefetch={false}
-              >
-                <FaGithub className="mr-2 w-5 h-5" />
-                GitHub
-              </Link>
-              <Link
-                href="#"
-                className="inline-flex items-center justify-center bg-black bg-opacity-50 px-4 py-2 rounded-full text-white text-sm font-medium shadow transition-colors hover:bg-opacity-70 focus:outline-none focus:ring-1 focus:ring-gray-500 disabled:pointer-events-none disabled:opacity-50"
-                prefetch={false}
-              >
-                <FaLinkedin className="mr-2 w-5 h-5" />
-                LinkedIn
-              </Link>
+            <div className="flex flex-col gap-2 min-[400px]:flex-row lg:justify-end">
+              <img
+                src="/Perfil.png"
+                width="400"
+                height="400"
+                alt="Profile"
+                className="mx-auto rounded-full w-40 h-40 object-cover"
+              />
             </div>
           </div>
         </section>
@@ -252,11 +222,12 @@ export default function Component() {
             </div>
           </div>
         </section>
+        ;
         <section
           id="about"
           className="w-full py-12 md:py-24 lg:py-32 bg-background/80"
         >
-          <div className="container grid gap-6 px-4 md:px-6 lg:grid-cols-3 lg:gap-10">
+          <div className="container grid items-center gap-4 px-4 md:px-6 lg:grid-cols-2 lg:gap-6">
             <div className="space-y-4">
               <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">
                 Sobre mí
@@ -271,122 +242,129 @@ export default function Component() {
                 desafíos y siempre estoy buscando aprender cosas nuevas.
               </p>
             </div>
-          </div>
-          {/* Sección Frontend */}
-          <div className="flex flex-col items-start space-y-4">
-            <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">
-              Frontend
+            <div className="flex flex-col items-start space-y-4">
+              <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">
+                Habilidades
+              </div>
+              <div className="grid grid-cols-3 gap-4">
+                <div>
+                  <div className="flex items-center gap-2">
+                    <FaLaptopCode className="w-5 h-5 text-primary" />
+                    <span>Frontend</span>
+                  </div>
+                  <ul className="grid gap-4 mt-2">
+                    <li className="flex items-center gap-2">
+                      <FaGreaterThan className="w-5 h-5 text-primary" />
+                      <span>JavaScript</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <FaGreaterThan className="w-5 h-5 text-primary" />
+                      <span>HTML</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <FaGreaterThan className="w-5 h-5 text-primary" />
+                      <span>CSS</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <FaGreaterThan className="w-5 h-5 text-primary" />
+                      <span>Tailwind</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <FaGreaterThan className="w-5 h-5 text-primary" />
+                      <span>React</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <FaGreaterThan className="w-5 h-5 text-primary" />
+                      <span>Material UI</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <FaGreaterThan className="w-5 h-5 text-primary" />
+                      <span>Redux</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <div className="flex items-center gap-2">
+                    <FaServer className="w-5 h-5 text-primary" />
+                    <span>Backend</span>
+                  </div>
+                  <ul className="grid gap-4 mt-2">
+                    <li className="flex items-center gap-2">
+                      <FaGreaterThan className="w-5 h-5 text-primary" />
+                      <span>Node.js</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <FaGreaterThan className="w-5 h-5 text-primary" />
+                      <span>PostgreSQL</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <FaGreaterThan className="w-5 h-5 text-primary" />
+                      <span>MongoDB</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <FaGreaterThan className="w-5 h-5 text-primary" />
+                      <span>SQL</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <FaGreaterThan className="w-5 h-5 text-primary" />
+                      <span>Mongoose</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <FaGreaterThan className="w-5 h-5 text-primary" />
+                      <span>Cloudinary</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <FaGreaterThan className="w-5 h-5 text-primary" />
+                      <span>MySQL</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <FaGreaterThan className="w-5 h-5 text-primary" />
+                      <span>Sequelize</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <div className="flex items-center gap-2">
+                    <FaTools className="w-5 h-5 text-primary" />
+                    <span>Herramientas Mágicas</span>
+                  </div>
+                  <ul className="grid gap-4 mt-2">
+                    <li className="flex items-center gap-2">
+                      <FaGreaterThan className="w-5 h-5 text-primary" />
+                      <span>Visual Studio</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <FaGreaterThan className="w-5 h-5 text-primary" />
+                      <span>Figma</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <FaGreaterThan className="w-5 h-5 text-primary" />
+                      <span>Graphic Design</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <FaGreaterThan className="w-5 h-5 text-primary" />
+                      <span>Postman</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <FaGreaterThan className="w-5 h-5 text-primary" />
+                      <span>UX/UI Design</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <FaGreaterThan className="w-5 h-5 text-primary" />
+                      <span>Git</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <FaGreaterThan className="w-5 h-5 text-primary" />
+                      <span>GitHub</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <FaGreaterThan className="w-5 h-5 text-primary" />
+                      <span>PL/SQL</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <ul className="grid gap-4">
-              <li className="flex items-center gap-2">
-                <FaCode className="w-5 h-5 text-primary" />
-                <span>JavaScript</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <FaHtml5 className="w-5 h-5 text-primary" />
-                <span>HTML</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <FaCss3Alt className="w-5 h-5 text-primary" />
-                <span>CSS</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <FaCss3Alt className="w-5 h-5 text-primary" />
-                <span>Tailwind</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <FaReact className="w-5 h-5 text-primary" />
-                <span>React</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <FaBootstrap className="w-5 h-5 text-primary" />
-                <span>Material UI</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <FaCss3Alt className="w-5 h-5 text-primary" />
-                <span>Redux</span>
-              </li>
-            </ul>
-          </div>
-          {/* Sección Backend */}
-          <div className="flex flex-col items-start space-y-4">
-            <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">
-              Backend
-            </div>
-            <ul className="grid gap-4">
-              <li className="flex items-center gap-2">
-                <FaNodeJs className="w-5 h-5 text-primary" />
-                <span>Node.js</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <FaDatabase className="w-5 h-5 text-primary" />
-                <span>PostgreSQL</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <FaDatabase className="w-5 h-5 text-primary" />
-                <span>MongoDB</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <FaDatabase className="w-5 h-5 text-primary" />
-                <span>SQL</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <FaDatabase className="w-5 h-5 text-primary" />
-                <span>Mongoose</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <FaCloudUploadAlt className="w-5 h-5 text-primary" />
-                <span>Cloudinary</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <FaDatabase className="w-5 h-5 text-primary" />
-                <span>MySQL</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <FaDatabase className="w-5 h-5 text-primary" />
-                <span>Sequelize</span>
-              </li>
-            </ul>
-          </div>
-          {/* Sección Herramientas Mágicas */}
-          <div className="flex flex-col items-start space-y-4">
-            <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">
-              Herramientas Mágicas
-            </div>
-            <ul className="grid gap-4">
-              <li className="flex items-center gap-2">
-                <FaCss3Alt className="w-5 h-5 text-primary" />
-                <span>Visual Studio</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <FaFigma className="w-5 h-5 text-primary" />
-                <span>Figma</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <FaPencilAlt className="w-5 h-5 text-primary" />
-                <span>Graphic Design</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <FaCss3Alt className="w-5 h-5 text-primary" />
-                <span>Postman</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <FaUserAlt className="w-5 h-5 text-primary" />
-                <span>UX/UI Design</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <FaGitAlt className="w-5 h-5 text-primary" />
-                <span>Git</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <FaGithub className="w-5 h-5 text-primary" />
-                <span>GitHub</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <FaDatabase className="w-5 h-5 text-primary" />
-                <span>PL/SQL</span>
-              </li>
-            </ul>
           </div>
         </section>
         <section
