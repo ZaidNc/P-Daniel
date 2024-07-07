@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import {
   FaMountain,
   FaGithub,
@@ -25,21 +24,21 @@ export default function Component() {
         <div className="flex w-full justify-center">
           <nav className="flex gap-4 sm:gap-6">
             <Link
-              href="#"
-              className="text-sm font-medium hover:underline underline-offset-4"
-              prefetch={false}
-            >
-              Proyectos
-            </Link>
-            <Link
-              href="#"
+              href="#about"
               className="text-sm font-medium hover:underline underline-offset-4"
               prefetch={false}
             >
               Sobre mí
             </Link>
             <Link
-              href="#"
+              href="#projects"
+              className="text-sm font-medium hover:underline underline-offset-4"
+              prefetch={false}
+            >
+              Proyectos
+            </Link>
+            <Link
+              href="#contact"
               className="text-sm font-medium hover:underline underline-offset-4"
               prefetch={false}
             >
@@ -69,7 +68,7 @@ export default function Component() {
           <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
             <div className="space-y-4">
               <img
-                src="/"
+                src="../../public/next.svg"
                 width="300"
                 height="300"
                 alt="Profile"
@@ -105,7 +104,10 @@ export default function Component() {
             </div>
           </div>
         </section>
-        <section id="projects" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
+        <section
+          id="projects"
+          className="w-full py-12 md:py-24 lg:py-32 bg-muted"
+        >
           <div className="container grid gap-8 px-4 md:px-6">
             <div className="space-y-4 text-center">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -178,7 +180,10 @@ export default function Component() {
             </div>
           </div>
         </section>
-        <section id="about" className="w-full py-12 md:py-24 lg:py-32  bg-background/80">
+        <section
+          id="about"
+          className="w-full py-12 md:py-24 lg:py-32  bg-background/80"
+        >
           <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
             <div className="space-y-4">
               <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">
@@ -221,7 +226,7 @@ export default function Component() {
         </section>
         <section
           id="contact"
-          className="w-full py-12 md:py-24 lg:py-32 bg-muted"
+          className="w-full py-12 md:py-24 lg:py-32  bg-muted"
         >
           <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
             <div className="space-y-4">
@@ -232,20 +237,35 @@ export default function Component() {
                 Trabajemos juntos
               </h2>
               <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Estoy siempre en busca de nuevas oportunidades y desafíos.
-                Pongámonos en contacto y hagamos algo increíble juntos.
+                Si tienes un proyecto en mente y crees que puedo ayudarte,
+                estaré encantado de escucharte. ¡Hablemos!
               </p>
             </div>
-            <form className="space-y-4">
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium text-primary-foreground"
+            <div className="bg-white rounded-lg p-6 shadow-md">
+              <form className="grid gap-4">
+                <input
+                  type="text"
+                  placeholder="Nombre"
+                  className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm shadow-sm transition-all placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 disabled:cursor-not-allowed disabled:opacity-50"
+                />
+                <input
+                  type="email"
+                  placeholder="Correo electrónico"
+                  className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm shadow-sm transition-all placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 disabled:cursor-not-allowed disabled:opacity-50"
+                />
+                <textarea
+                  placeholder="Mensaje"
+                  className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm shadow-sm transition-all placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 disabled:cursor-not-allowed disabled:opacity-50"
+                  rows={4}
+                ></textarea>
+                <button
+                  type="submit"
+                  className="inline-flex w-max items-center justify-center rounded-md border border-primary bg-background px-4 py-2 text-sm font-medium text-primary shadow transition-all hover:bg-primary hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                 >
-                  Nombre
-                </label>
-              </div>
-            </form>
+                  Enviar mensaje
+                </button>
+              </form>
+            </div>
           </div>
         </section>
       </main>
