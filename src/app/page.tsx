@@ -8,7 +8,6 @@ import {
   FaTools,
   FaGreaterThan,
 } from "react-icons/fa";
-import { SiVisualstudiocode, SiPostman } from "react-icons/si";
 
 export default function Component() {
   return (
