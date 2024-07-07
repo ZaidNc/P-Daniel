@@ -68,7 +68,7 @@ export default function Component() {
           <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
             <div className="space-y-4">
               <img
-                src="../../public/next.svg"
+                src="/Perfil.png"
                 width="300"
                 height="300"
                 alt="Profile"
@@ -84,23 +84,23 @@ export default function Component() {
                 </p>
               </div>
             </div>
-            <div className="flex flex-col gap-2 min-[400px]:flex-row lg:justify-end">
-              <div className="flex gap-2">
-                <Link
-                  href="#"
-                  className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                  prefetch={false}
-                >
-                  <FaGithub className="w-5 h-5" />
-                </Link>
-                <Link
-                  href="#"
-                  className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                  prefetch={false}
-                >
-                  <FaLinkedin className="w-5 h-5" />
-                </Link>
-              </div>
+            <div className="flex flex-col gap-2 min-[400px] lg:flex-row lg:justify-end">
+              <Link
+                href="#"
+                className="inline-flex items-center justify-center bg-black bg-opacity-50 px-4 py-2 rounded-full text-white text-sm font-medium shadow transition-colors hover:bg-opacity-70 focus:outline-none focus:ring-1 focus:ring-gray-500 disabled:pointer-events-none disabled:opacity-50"
+                prefetch={false}
+              >
+                <FaGithub className="mr-2 w-5 h-5" />
+                GitHub
+              </Link>
+              <Link
+                href="#"
+                className="inline-flex items-center justify-center bg-black bg-opacity-50 px-4 py-2 rounded-full text-white text-sm font-medium shadow transition-colors hover:bg-opacity-70 focus:outline-none focus:ring-1 focus:ring-gray-500 disabled:pointer-events-none disabled:opacity-50"
+                prefetch={false}
+              >
+                <FaLinkedin className="mr-2 w-5 h-5" />
+                LinkedIn
+              </Link>
             </div>
           </div>
         </section>
