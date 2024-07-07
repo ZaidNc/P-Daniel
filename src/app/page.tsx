@@ -108,8 +108,8 @@ export default function Component() {
           id="projects"
           className="w-full py-12 md:py-24 lg:py-32 bg-muted"
         >
-          <div className="container grid gap-8 px-4 md:px-6">
-            <div className="space-y-4 text-center">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="text-center">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                 Algunos de mis trabajos
               </h2>
@@ -119,65 +119,123 @@ export default function Component() {
                 tecnología.
               </p>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              <Link href="#" className="group" prefetch={false}>
-                <div className="rounded-lg overflow-hidden">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+              <Link href="#" className="group relative" prefetch={false}>
+                <div className="rounded-lg overflow-hidden relative">
                   <img
                     src="/FastFood.jpeg"
-                    width="400"
-                    height="300"
                     alt="Project 1"
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
                   />
-                </div>
-                <div className="mt-4 text-center">
-                  <h3 className="text-lg font-bold group-hover:underline">
-                    FastFood App
-                  </h3>
-                  <p className="text-muted-foreground">
-                    Se desarrollo una aplicación destinada a facilitar la compra
-                    de alimentos en varios restaurantes en una sola aplicación
-                    Tecnologías Utilizadas: Backend: Node.js, Express,
-                    PostgreSQL Frontend: React, Redux, CSS
-                  </p>
+                  <div className="absolute inset-0 bg-black bg-opacity-20 flex items-end">
+                    <div className="text-left text-white p-4 w-full">
+                      <h3 className="text-lg font-bold mb-2 group-hover:underline">
+                        FastFood App
+                      </h3>
+                      <p className="text-sm mt-2">
+                        Desarrollo de una aplicación para facilitar la compra de
+                        alimentos.
+                      </p>
+                      <div className="flex flex-wrap gap-2 mt-2">
+                        <div className="bg-primary text-white px-2 py-1 rounded-full text-xs">
+                          Node.js
+                        </div>
+                        <div className="bg-primary text-white px-2 py-1 rounded-full text-xs">
+                          Express
+                        </div>
+                        <div className="bg-primary text-white px-2 py-1 rounded-full text-xs">
+                          PostgreSQL
+                        </div>
+                        <div className="bg-primary text-white px-2 py-1 rounded-full text-xs">
+                          React
+                        </div>
+                        <div className="bg-primary text-white px-2 py-1 rounded-full text-xs">
+                          Redux
+                        </div>
+                        <div className="bg-primary text-white px-2 py-1 rounded-full text-xs">
+                          CSS
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </Link>
-              <Link href="#" className="group" prefetch={false}>
-                <div className="rounded-lg overflow-hidden">
+              <Link href="#" className="group relative" prefetch={false}>
+                <div className="rounded-lg overflow-hidden relative">
                   <img
                     src="/FastFood.jpeg"
-                    width="400"
-                    height="300"
                     alt="Project 2"
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
                   />
-                </div>
-                <div className="mt-4 text-center">
-                  <h3 className="text-lg font-bold group-hover:underline">
-                    Proyecto 2
-                  </h3>
-                  <p className="text-muted-foreground">
-                    Descripción del proyecto 2
-                  </p>
+                  <div className="absolute inset-0 bg-black bg-opacity-20 flex items-end">
+                    <div className="text-left text-white p-4 w-full">
+                      <h3 className="text-lg font-bold mb-2 group-hover:underline">
+                        Pi Dogs
+                      </h3>
+                      <p className="text-sm mt-2">
+                        Api de Dogs xd
+                      </p>
+                      <div className="flex flex-wrap gap-2 mt-2">
+                        <div className="bg-primary text-white px-2 py-1 rounded-full text-xs">
+                          Node.js
+                        </div>
+                        <div className="bg-primary text-white px-2 py-1 rounded-full text-xs">
+                          Express
+                        </div>
+                        <div className="bg-primary text-white px-2 py-1 rounded-full text-xs">
+                          PostgreSQL
+                        </div>
+                        <div className="bg-primary text-white px-2 py-1 rounded-full text-xs">
+                          React
+                        </div>
+                        <div className="bg-primary text-white px-2 py-1 rounded-full text-xs">
+                          Redux
+                        </div>
+                        <div className="bg-primary text-white px-2 py-1 rounded-full text-xs">
+                          CSS
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </Link>
-              <Link href="#" className="group" prefetch={false}>
-                <div className="rounded-lg overflow-hidden">
+              <Link href="#" className="group relative" prefetch={false}>
+                <div className="rounded-lg overflow-hidden relative">
                   <img
                     src="/FastFood.jpeg"
-                    width="400"
-                    height="300"
                     alt="Project 3"
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
                   />
-                </div>
-                <div className="mt-4 text-center">
-                  <h3 className="text-lg font-bold group-hover:underline">
-                    Proyecto 3
-                  </h3>
-                  <p className="text-muted-foreground">
-                    Descripción del proyecto 3
-                  </p>
+                  <div className="absolute inset-0 bg-black bg-opacity-20 flex items-end">
+                    <div className="text-left text-white p-4 w-full">
+                      <h3 className="text-lg font-bold mb-2 group-hover:underline">
+                        Api Rick And Morty
+                      </h3>
+                      <p className="text-sm mt-2">
+                        Api de Rick And Morty xd
+                      </p>
+                      <div className="flex flex-wrap gap-2 mt-2">
+                        <div className="bg-primary text-white px-2 py-1 rounded-full text-xs">
+                          Node.js
+                        </div>
+                        <div className="bg-primary text-white px-2 py-1 rounded-full text-xs">
+                          Express
+                        </div>
+                        <div className="bg-primary text-white px-2 py-1 rounded-full text-xs">
+                          PostgreSQL
+                        </div>
+                        <div className="bg-primary text-white px-2 py-1 rounded-full text-xs">
+                          React
+                        </div>
+                        <div className="bg-primary text-white px-2 py-1 rounded-full text-xs">
+                          Redux
+                        </div>
+                        <div className="bg-primary text-white px-2 py-1 rounded-full text-xs">
+                          CSS
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </Link>
             </div>
