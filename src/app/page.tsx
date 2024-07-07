@@ -69,7 +69,7 @@ export default function Component() {
           <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
             <div className="space-y-4">
               <img
-                src="/placeholder.svg"
+                src="/"
                 width="300"
                 height="300"
                 alt="Profile"
@@ -80,7 +80,7 @@ export default function Component() {
                   Daniel Navarro
                 </h1>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Desarrollador Full Stak y diseñador gráfico con experiencia en
+                  Desarrollador Full Stak con experiencia en
                   crear soluciones digitales atractivas y funcionales.
                 </p>
               </div>
