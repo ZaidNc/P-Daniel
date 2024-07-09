@@ -10,6 +10,8 @@ import {
 } from "react-icons/fa";
 import { CldImage } from "next-cloudinary";
 
+const cloudName = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME;
+
 export default function Component() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
