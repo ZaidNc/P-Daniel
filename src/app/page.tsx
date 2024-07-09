@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import {
   FaMountain,
@@ -8,6 +9,7 @@ import {
   FaTools,
   FaGreaterThan,
 } from "react-icons/fa";
+import { CldImage } from "next-cloudinary";
 
 export default function Component() {
   return (
@@ -18,7 +20,13 @@ export default function Component() {
           className="flex items-center justify-center"
           prefetch={false}
         >
-          <FaMountain className="h-5 w-5 text-primary-foreground" />
+          <CldImage
+            src="ZT Icon"
+            width="24"
+            height="24"
+            alt="ZT Icon"
+            className="h-5 w-5 text-primary-foreground"
+          />
           <span className="sr-only">Mi Portafolio</span>
         </Link>
         <div className="flex w-full justify-center">
@@ -69,8 +77,8 @@ export default function Component() {
         <section id="home" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container mx-auto flex flex-col lg:flex-row items-center gap-8 px-4 md:px-6">
             <div className="flex-shrink-0">
-              <img
-                src="/Perfil.png"
+              <CldImage
+                src="Daniel Navarro"
                 width="300"
                 height="300"
                 alt="Profile"
