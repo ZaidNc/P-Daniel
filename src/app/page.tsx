@@ -48,14 +48,16 @@ export default function Component() {
         </div>
         <div className="ml-auto flex gap-2">
           <Link
-            href="#"
+            href="https://github.com/ZaidNc"
+            target="_blank"
             className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-primary-foreground text-sm font-medium text-primary shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
             prefetch={false}
           >
             <FaGithub className="w-4 h-4" />
           </Link>
           <Link
-            href="#"
+            href="https://www.linkedin.com/in/danielnavarrozt/"
+            target="_blank"
             className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-primary-foreground text-sm font-medium text-primary shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
             prefetch={false}
           >
@@ -65,49 +67,52 @@ export default function Component() {
       </header>
       <main className="flex-1 pt-20">
         <section id="home" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container grid items-center gap-4 px-4 md:px-6 lg:grid-cols-2 lg:gap-6">
-            <div className="mx-auto text-left space-y-4">
-              <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  Daniel Navarro
-                </h1>
-                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Desarrollador Full Stack y diseñador gráfico con experiencia en
-                  crear soluciones digitales atractivas y funcionales.
-                </p>
-              </div>
-              <div className="flex gap-4">
-                <Link
-                  href="#"
-                  className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-primary-foreground text-sm font-medium text-primary shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                  prefetch={false}
-                >
-                  <FaGithub className="w-4 h-4" />
-                </Link>
-                <Link
-                  href="#"
-                  className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-primary-foreground text-sm font-medium text-primary shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                  prefetch={false}
-                >
-                  <FaLinkedin className="w-4 h-4" />
-                </Link>
-                <Link
-                  href="#"
-                  className="inline-flex h-8 items-center justify-center rounded-md bg-black text-white font-medium shadow transition-colors hover:bg-black/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                  prefetch={false}
-                >
-                  Descargar CV
-                </Link>
-              </div>
-            </div>
-            <div className="flex flex-col gap-2 min-[400px]:flex-row lg:justify-end">
+          <div className="container mx-auto flex flex-col lg:flex-row items-center gap-8 px-4 md:px-6">
+            <div className="flex-shrink-0">
               <img
                 src="/Perfil.png"
                 width="300"
                 height="300"
                 alt="Profile"
-                className="mx-auto rounded-full w-32 h-32 object-cover"
+                className="w-40 h-40 rounded-full object-cover"
               />
+            </div>
+            <div className="text-left space-y-4 lg:flex-grow">
+              <div className="space-y-2">
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                  Daniel Navarro
+                </h1>
+                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Desarrollador Full Stack y diseñador gráfico con experiencia
+                  en crear soluciones digitales atractivas y funcionales.
+                </p>
+              </div>
+              <div className="flex gap-4 items-center">
+                <Link
+                  href="https://github.com/ZaidNc"
+                  target="_blank"
+                  className="inline-flex items-center justify-center rounded-full bg-white text-black shadow transition-colors hover:bg-gray-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-400 disabled:pointer-events-none disabled:opacity-50"
+                  prefetch={false}
+                >
+                  <FaGithub className="w-8 h-8 text-black" />
+                </Link>
+                <Link
+                  href="https://www.linkedin.com/in/danielnavarrozt/"
+                  target="_blank"
+                  className="inline-flex items-center justify-center rounded-full bg-white text-black shadow transition-colors hover:bg-gray-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-400 disabled:pointer-events-none disabled:opacity-50"
+                  prefetch={false}
+                >
+                  <FaLinkedin className="w-8 h-8 text-black" />
+                </Link>
+                <Link
+                  href="/CV.pdf"
+                  download="CV.pdf"
+                  className="inline-flex items-center justify-center px-4 py-2 bg-black text-white text-sm font-medium rounded-md shadow-sm hover:bg-black/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                  prefetch={false}
+                >
+                  Descargar CV
+                </Link>
+              </div>
             </div>
           </div>
         </section>
@@ -395,7 +400,7 @@ export default function Component() {
         >
           <div className="container mx-auto grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
             <div className="space-y-4">
-              <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">
+              <div className="inline-block rounded-lg bg-muted  py-1 text-sm">
                 Contacto
               </div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
