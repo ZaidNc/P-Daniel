@@ -2,9 +2,14 @@ import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { CldImage } from "next-cloudinary";
 import { FlipWords } from "@/app/components/ui/flip-words";
+import { HoverBorderGradient } from "@/app/components/ui/hover-border-gradient";
 
 export default function Hero() {
-  const words = ["Desarrollador Full Stack", "Front - End", "Diseñador Gráfico"];
+  const words = [
+    "Desarrollador Full Stack",
+    "Front - End",
+    "Diseñador Gráfico",
+  ];
 
   return (
     <section id="home" className="w-full py-12 md:py-24 lg:py-32">
@@ -21,7 +26,7 @@ export default function Hero() {
         <div className="text-left space-y-4 lg:flex-grow">
           <div className="space-y-2">
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-              Daniel Navarro / <FlipWords words={words} />
+              Daniel Navarro / <FlipWords words={words} className="text-black" />
             </h1>
             <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               Desarrollador Full Stack y diseñador gráfico con experiencia en
@@ -45,14 +50,14 @@ export default function Hero() {
             >
               <FaLinkedin className="w-8 h-8 text-black" />
             </Link>
-            <Link
-              href="/CV.pdf"
-              download="CV.pdf"
-              className="inline-flex items-center justify-center px-4 py-2 bg-black text-white text-sm font-medium rounded-md shadow-sm hover:bg-black/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-              prefetch={false}
-            >
-              Descargar CV
-            </Link>
+            <HoverBorderGradient>
+              <a
+                href="/CV.pdf"
+                target="_blank"
+              >
+                Descargar CV
+              </a>
+            </HoverBorderGradient>
           </div>
         </div>
       </div>
