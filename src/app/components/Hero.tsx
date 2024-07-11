@@ -26,7 +26,8 @@ export default function Hero() {
         <div className="text-left space-y-4 lg:flex-grow">
           <div className="space-y-2">
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-              Daniel Navarro / <FlipWords words={words} className="text-black" />
+              Daniel Navarro /{" "}
+              <FlipWords words={words} className="text-black" />
             </h1>
             <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               Desarrollador Full Stack y diseñador gráfico con experiencia en
@@ -37,7 +38,7 @@ export default function Hero() {
             <Link
               href="https://github.com/ZaidNc"
               target="_blank"
-              className="inline-flex items-center justify-center rounded-full bg-white text-black shadow transition-colors hover:bg-gray-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-400 disabled:pointer-events-none disabled:opacity-50"
+              className="inline-flex items-center justify-center rounded-full bg-white text-black shadow transition-all duration-300 hover:bg-gray-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-400 disabled:pointer-events-none disabled:opacity-50 transform hover:scale-110"
               prefetch={false}
             >
               <FaGithub className="w-8 h-8 text-black" />
@@ -45,16 +46,13 @@ export default function Hero() {
             <Link
               href="https://www.linkedin.com/in/danielnavarrozt/"
               target="_blank"
-              className="inline-flex items-center justify-center rounded-full bg-white text-black shadow transition-colors hover:bg-gray-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-400 disabled:pointer-events-none disabled:opacity-50"
+              className="inline-flex items-center justify-center rounded-full bg-white text-black shadow transition-all duration-300 hover:bg-gray-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-400 disabled:pointer-events-none disabled:opacity-50 transform hover:scale-110"
               prefetch={false}
             >
               <FaLinkedin className="w-8 h-8 text-black" />
             </Link>
             <HoverBorderGradient>
-              <a
-                href="/CV.pdf"
-                target="_blank"
-              >
+              <a href="/CV.pdf" target="_blank">
                 Descargar CV
               </a>
             </HoverBorderGradient>

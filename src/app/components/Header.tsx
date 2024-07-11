@@ -50,7 +50,7 @@ export default function Header() {
         <Link
           href="https://github.com/ZaidNc"
           target="_blank"
-          className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-primary-foreground text-sm font-medium text-primary shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+          className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-primary-foreground text-sm font-medium text-primary shadow transform transition-all duration-300 hover:scale-110 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
           prefetch={false}
         >
           <FaGithub className="w-4 h-4" />
@@ -58,7 +58,7 @@ export default function Header() {
         <Link
           href="https://www.linkedin.com/in/danielnavarrozt/"
           target="_blank"
-          className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-primary-foreground text-sm font-medium text-primary shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+          className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-primary-foreground text-sm font-medium text-primary shadow transform transition-all duration-300 hover:scale-110 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
           prefetch={false}
         >
           <FaLinkedin className="w-4 h-4" />
