@@ -30,8 +30,12 @@ export default function Hero() {
               <FlipWords words={words} className="text-black" />
             </h1>
             <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Desarrollador Full Stack y diseñador gráfico con experiencia en
-              crear soluciones digitales atractivas y funcionales.
+              <strong> Desarrollador Full Stack y diseñador gráfico </strong> de
+              Colombia, Bogota.
+            </p>
+            <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              Con experiencia en crear soluciones digitales atractivas y
+              funcionales
             </p>
           </div>
           <div className="flex gap-4 items-center">
