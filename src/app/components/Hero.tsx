@@ -7,7 +7,7 @@ import { HoverBorderGradient } from "@/app/components/ui/hover-border-gradient";
 export default function Hero() {
   const words = [
     "Desarrollador Full Stack",
-    "Front - End",
+    "Desarrollador Front - End",
     "Diseñador Gráfico",
   ];
 
