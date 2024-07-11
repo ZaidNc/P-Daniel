@@ -19,9 +19,9 @@ export const HeroParallax = ({
     thumbnail: string;
   }[];
 }) => {
-  const firstRow = products.slice(0, 2);
-  const secondRow = products.slice(2, 4);
-  const thirdRow = products.slice(4, 5);
+  const firstRow = products.slice(0, 4);
+  const secondRow = products.slice(4, 8);
+  const thirdRow = products.slice(8, 12);
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -103,7 +103,7 @@ export const HeroParallax = ({
 
 export const Header = () => {
   return (
-    <div className="max-w-7xl relative mx-auto py-20 md:py-20 px-4 w-full  left-0 top-0">
+    <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
       <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
         Desarrollador Full Stack
       </h2>
@@ -147,7 +147,7 @@ export const ProductCard = ({
           src={product.thumbnail}
           height="600"
           width="600"
-          className="object-cover object-left-top absolute h-full w-full inset-0"
+          className="object-contain object-left-top absolute h-full w-full inset-0"
           alt={product.title}
         />
       </Link>

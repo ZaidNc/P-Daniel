@@ -26,7 +26,41 @@ const technologies = [
     link: "https://www.typescriptlang.org/",
     thumbnail: "/Typescript_logo_2020.svg",
   },
-  // Agrega más tecnologías según sea necesario
+  {
+    title: "Git",
+    link: "https://git-scm.com/",
+    thumbnail: "/Git-logo.svg",
+  },
+  {
+    title: "HTML",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+    thumbnail: "/HTML5_logo_and_wordmark.svg",
+  },
+  {
+    title: "CSS",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+    thumbnail: "/CSS3_logo_and_wordmark.svg",
+  },
+  {
+    title: "Redux",
+    link: "https://redux.js.org/",
+    thumbnail: "/Redux.png",
+  },
+  {
+    title: 'PostgreSQL',
+    link: 'https://www.postgresql.org/',
+    thumbnail: '/Postgresql_elephant.svg',
+  },
+  {
+    title: 'JavaScript',
+    link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+    thumbnail: '/JavaScript-logo.png',
+  },
+  {
+    title: 'Material UI',
+    link: 'https://mui.com/',
+    thumbnail: '/material-ui-1.svg',
+  },
 ];
 
 export default function About() {
