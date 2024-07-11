@@ -47,19 +47,19 @@ const technologies = [
     thumbnail: "/Redux.png",
   },
   {
-    title: 'PostgreSQL',
-    link: 'https://www.postgresql.org/',
-    thumbnail: '/Postgresql_elephant.svg',
+    title: "PostgreSQL",
+    link: "https://www.postgresql.org/",
+    thumbnail: "/Postgresql_elephant.svg",
   },
   {
-    title: 'JavaScript',
-    link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
-    thumbnail: '/JavaScript-logo.png',
+    title: "JavaScript",
+    link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    thumbnail: "/JavaScript-logo.png",
   },
   {
-    title: 'Material UI',
-    link: 'https://mui.com/',
-    thumbnail: '/material-ui-1.svg',
+    title: "Material UI",
+    link: "https://mui.com/",
+    thumbnail: "/material-ui-1.svg",
   },
 ];
 
