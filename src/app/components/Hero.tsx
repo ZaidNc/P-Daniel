@@ -8,7 +8,7 @@ export default function Hero() {
   const words = [
     "Desarrollador Full Stack",
     "Desarrollador Front - End",
-    "Diseñador Gráfico",
+    "Desarrollador Back - End",
   ];
 
   return (
