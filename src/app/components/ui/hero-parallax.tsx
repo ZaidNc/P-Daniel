@@ -108,11 +108,13 @@ export const Header = () => {
       <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
         Desarrollador Full Stack
       </h2>
-      <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed mt-4">
-        Soy un profesional creativo y apasionado por la tecnología. Disfruto
-        creando soluciones digitales que combinan un diseño elegante con una
-        funcionalidad excepcional. Me encantan los desafíos y siempre estoy
-        buscando aprender cosas nuevas.
+      <p className="text-left text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed mt-4">
+        Mi nombre es Daniel Navarro, aunque mis amigos me llaman Zai. Tengo 19
+        años y acabo de terminar mis estudios como desarrollador web. Me
+        apasiona especialmente el frontend, donde disfruto creando soluciones
+        digitales que combinan un diseño elegante con una funcionalidad
+        excepcional. Me encantan los desafíos y estoy siempre en búsqueda
+        constante de aprender cosas.
       </p>
     </div>
   );
