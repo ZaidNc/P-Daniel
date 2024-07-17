@@ -13,7 +13,7 @@ Este repositorio contiene el código fuente de mi portafolio personal, diseñado
 ## Tecnologías Utilizadas
 
 - **Frontend**: React.js, Next.js, Tailwind CSS
-- **Herramientas**: Git, GitHub, Firebase, Cloudinary
+- **Herramientas**: Git, GitHub, Cloudinary
 
 ## Uso
 
@@ -24,12 +24,10 @@ Este repositorio contiene el código fuente de mi portafolio personal, diseñado
    cd Portafolio
 Instala las Dependencias:
 
-bash
 Copiar código
 npm install
 Inicia el Servidor de Desarrollo:
 
-bash
 Copiar código
 npm run dev
 Visita http://localhost:3000 en tu navegador web para ver el portafolio.
@@ -37,7 +35,4 @@ Visita http://localhost:3000 en tu navegador web para ver el portafolio.
 Contribuciones
 ¡Las contribuciones son bienvenidas y apreciadas! Si deseas mejorar alguna funcionalidad, corregir errores o añadir nuevas características, por favor abre un pull request.
 
-Contacto
-LinkedIn: ZaidNc
-GitHub: @ZaidNc
 ¡Gracias por visitar mi portafolio!
