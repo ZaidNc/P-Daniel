@@ -65,11 +65,6 @@ export default function Projects() {
                 </div>
               </div>
             </Link>
-            <Link href="./project-details" className="block mt-4 text-center">
-              <button className="inline-block w-full px-6 py-2 text-sm font-medium leading-5 text-white bg-primary border border-transparent rounded-md hover:bg-primary-dark">
-                Ver más detalles
-              </button>
-            </Link>
           </div>
 
           <div className="group relative">
@@ -114,11 +109,6 @@ export default function Projects() {
                 </div>
               </div>
             </Link>
-            <Link href="/project-details" className="block mt-4 text-center">
-              <button className="inline-block w-full px-6 py-2 text-sm font-medium leading-5 text-white bg-primary border border-transparent rounded-md hover:bg-primary-dark">
-                Ver más detalles
-              </button>
-            </Link>
           </div>
 
           <div className="group relative">
@@ -160,12 +150,15 @@ export default function Projects() {
                 </div>
               </div>
             </Link>
-            <Link href="/project-details" className="block mt-4 text-center">
-              <button className="inline-block w-full px-6 py-2 text-sm font-medium leading-5 text-white bg-primary border border-transparent rounded-md hover:bg-primary-dark">
-                Ver más detalles
-              </button>
-            </Link>
           </div>
+        </div>
+
+        <div className="mt-8 text-center">
+          <Link href="/ProjectDetails">
+            <button className="inline-block px-6 py-3 text-sm font-medium leading-5 text-white bg-primary border border-transparent rounded-md hover:bg-primary-dark">
+              Ver detalles de los proyectos
+            </button>
+          </Link>
         </div>
       </div>
     </section>
