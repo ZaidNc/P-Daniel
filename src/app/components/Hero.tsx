@@ -30,7 +30,7 @@ export default function Hero() {
               <FlipWords words={words} className="text-black" />
             </h1>
             <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              <strong> Desarrollador Full Stack y diseñador gráfico </strong> de
+              <strong> Desarrollador Full Stack y diseñador UI / UX </strong> de
               Colombia, Bogota.
             </p>
             <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
