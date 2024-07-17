@@ -17,144 +17,155 @@ export default function Projects() {
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-          <Link
-            href="https://fast-food-front-deploy.vercel.app/"
-            className="group relative"
-            target="_blank"
-          >
-            <div className="rounded-lg overflow-hidden relative">
-              <CldImage
-                src="FastFood"
-                width="1000"
-                height="500"
-                crop="fill"
-                quality="auto"
-                alt="Project 1"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-20 flex items-end">
-                <div className="text-left text-white p-4 w-full">
-                  <h3 className="text-lg font-bold mb-2 group-hover:underline">
-                    FastFood App
-                  </h3>
-                  <p className="text-sm mt-2">
-                    Desarrollo de una aplicación para facilitar la compra de
-                    alimentos.
-                  </p>
-                  <div className="flex flex-wrap gap-2 mt-2">
-                    <div className="bg-primary text-white px-2 py-1 rounded-full text-xs">
-                      Node.js
-                    </div>
-                    <div className="bg-primary text-white px-2 py-1 rounded-full text-xs">
-                      Express
-                    </div>
-                    <div className="bg-primary text-white px-2 py-1 rounded-full text-xs">
-                      PostgreSQL
-                    </div>
-                    <div className="bg-primary text-white px-2 py-1 rounded-full text-xs">
-                      React
-                    </div>
-                    <div className="bg-primary text-white px-2 py-1 rounded-full text-xs">
-                      Redux
-                    </div>
-                    <div className="bg-primary text-white px-2 py-1 rounded-full text-xs">
-                      Tailwind CSS
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Link>
-          <Link
-            href="https://github.com/ZaidNc/PI-DOGS-HENRY"
-            className="group relative"
-            target="_blank"
-          >
-            <div className="rounded-lg overflow-hidden relative">
-              <CldImage
-                src="Dogs"
-                width="1000"
-                height="500"
-                crop="fill"
-                quality="auto"
-                alt="Project 1"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-20 flex items-end">
-                <div className="text-left text-white p-4 w-full">
-                  <h3 className="text-lg font-bold mb-2 group-hover:underline">
-                    Pi-Dogs
-                  </h3>
-                  <p className="text-sm mt-2">
-                    Desarrollo de una aplicación para buscar raza de perros,
-                    filtrados por tamaño, peso, temperamento
-                  </p>
-                  <div className="flex flex-wrap gap-2 mt-2">
-                    <div className="bg-primary text-white px-2 py-1 rounded-full text-xs">
-                      React
-                    </div>
-                    <div className="bg-primary text-white px-2 py-1 rounded-full text-xs">
-                      Redux
-                    </div>
-                    <div className="bg-primary text-white px-2 py-1 rounded-full text-xs">
-                      PostgreSQL
-                    </div>
-                    <div className="bg-primary text-white px-2 py-1 rounded-full text-xs">
-                      CSS
+          <div className="group relative">
+            <Link
+              href="https://fast-food-front-deploy.vercel.app/"
+              target="_blank"
+            >
+              <div className="rounded-lg overflow-hidden relative">
+                <CldImage
+                  src="FastFood"
+                  width="1000"
+                  height="500"
+                  crop="fill"
+                  quality="auto"
+                  alt="FastFood App"
+                  className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-20 flex items-end">
+                  <div className="text-left text-white p-4 w-full">
+                    <h3 className="text-lg font-bold mb-2 group-hover:underline">
+                      FastFood App
+                    </h3>
+                    <p className="text-sm mt-2">
+                      Desarrollo de una aplicación para facilitar la compra de
+                      alimentos.
+                    </p>
+                    <div className="flex flex-wrap gap-2 mt-2">
+                      <div className="bg-primary text-white px-2 py-1 rounded-full text-xs">
+                        Node.js
+                      </div>
+                      <div className="bg-primary text-white px-2 py-1 rounded-full text-xs">
+                        Express
+                      </div>
+                      <div className="bg-primary text-white px-2 py-1 rounded-full text-xs">
+                        PostgreSQL
+                      </div>
+                      <div className="bg-primary text-white px-2 py-1 rounded-full text-xs">
+                        React
+                      </div>
+                      <div className="bg-primary text-white px-2 py-1 rounded-full text-xs">
+                        Redux
+                      </div>
+                      <div className="bg-primary text-white px-2 py-1 rounded-full text-xs">
+                        Tailwind CSS
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </Link>
-          <Link
-            href="https://github.com/ZaidNc/Rick-and-Morty-Frond"
-            className="group relative"
-            target="_blank"
-          >
-            <div className="rounded-lg overflow-hidden relative">
-              <CldImage
-                src="RickAndMorty"
-                width="1000"
-                height="500"
-                crop="fill"
-                quality="auto"
-                alt="Project 1"
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-20 flex items-end">
-                <div className="text-left text-white p-4 w-full">
-                  <h3 className="text-lg font-bold mb-2 group-hover:underline">
-                    RickAndMory
-                  </h3>
-                  <p className="text-sm mt-2">
-                    Rick and Morty es una (SPA) diseñada para mostrar personajes
-                    de la serie.
-                  </p>
-                  <div className="flex flex-wrap gap-2 mt-2">
-                    <div className="bg-primary text-white px-2 py-1 rounded-full text-xs">
-                      React
-                    </div>
-                    <div className="bg-primary text-white px-2 py-1 rounded-full text-xs">
-                      Redux
-                    </div>
-                    <div className="bg-primary text-white px-2 py-1 rounded-full text-xs">
-                      CSS
+            </Link>
+            <Link href="./project-details" className="block mt-4 text-center">
+              <button className="inline-block w-full px-6 py-2 text-sm font-medium leading-5 text-white bg-primary border border-transparent rounded-md hover:bg-primary-dark">
+                Ver más detalles
+              </button>
+            </Link>
+          </div>
+
+          <div className="group relative">
+            <Link
+              href="https://github.com/ZaidNc/PI-DOGS-HENRY"
+              target="_blank"
+            >
+              <div className="rounded-lg overflow-hidden relative">
+                <CldImage
+                  src="Dogs"
+                  width="1000"
+                  height="500"
+                  crop="fill"
+                  quality="auto"
+                  alt="Pi-Dogs"
+                  className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-20 flex items-end">
+                  <div className="text-left text-white p-4 w-full">
+                    <h3 className="text-lg font-bold mb-2 group-hover:underline">
+                      Pi-Dogs
+                    </h3>
+                    <p className="text-sm mt-2">
+                      Desarrollo de una aplicación para buscar raza de perros,
+                      filtrados por tamaño, peso, temperamento
+                    </p>
+                    <div className="flex flex-wrap gap-2 mt-2">
+                      <div className="bg-primary text-white px-2 py-1 rounded-full text-xs">
+                        React
+                      </div>
+                      <div className="bg-primary text-white px-2 py-1 rounded-full text-xs">
+                        Redux
+                      </div>
+                      <div className="bg-primary text-white px-2 py-1 rounded-full text-xs">
+                        PostgreSQL
+                      </div>
+                      <div className="bg-primary text-white px-2 py-1 rounded-full text-xs">
+                        CSS
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </Link>
-        </div>
-        <div className="text-center mt-8">
-          <Link
-            href="#"
-            className="text-sm font-medium hover:underline underline-offset-4"
-            prefetch={false}
-          >
-            Desarrollando mas proyectos...
-          </Link>
+            </Link>
+            <Link href="/project-details" className="block mt-4 text-center">
+              <button className="inline-block w-full px-6 py-2 text-sm font-medium leading-5 text-white bg-primary border border-transparent rounded-md hover:bg-primary-dark">
+                Ver más detalles
+              </button>
+            </Link>
+          </div>
+
+          <div className="group relative">
+            <Link
+              href="https://github.com/ZaidNc/Rick-and-Morty-Frond"
+              target="_blank"
+            >
+              <div className="rounded-lg overflow-hidden relative">
+                <CldImage
+                  src="RickAndMorty"
+                  width="1000"
+                  height="500"
+                  crop="fill"
+                  quality="auto"
+                  alt="Rick and Morty App"
+                  className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-20 flex items-end">
+                  <div className="text-left text-white p-4 w-full">
+                    <h3 className="text-lg font-bold mb-2 group-hover:underline">
+                      Rick and Morty App
+                    </h3>
+                    <p className="text-sm mt-2">
+                      Desarrollo de una aplicación para visualizar personajes de
+                      la serie Rick and Morty
+                    </p>
+                    <div className="flex flex-wrap gap-2 mt-2">
+                      <div className="bg-primary text-white px-2 py-1 rounded-full text-xs">
+                        React
+                      </div>
+                      <div className="bg-primary text-white px-2 py-1 rounded-full text-xs">
+                        Redux
+                      </div>
+                      <div className="bg-primary text-white px-2 py-1 rounded-full text-xs">
+                        CSS
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Link>
+            <Link href="/project-details" className="block mt-4 text-center">
+              <button className="inline-block w-full px-6 py-2 text-sm font-medium leading-5 text-white bg-primary border border-transparent rounded-md hover:bg-primary-dark">
+                Ver más detalles
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
     </section>
