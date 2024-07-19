@@ -65,7 +65,7 @@ const technologies = [
 
 export default function About() {
   return (
-    <section id="about" className="w-full py-12 md:py-24 lg:py-32">
+    <section id="about" className="w-full">
       <div className="container mx-auto px-4 md:px-6 text-center">
         <HeroParallax products={technologies} />
       </div>

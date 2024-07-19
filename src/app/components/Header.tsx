@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { LinkedInLogoIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
 import { CldImage } from "next-cloudinary";
 
 const cloudName = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME;
@@ -53,7 +53,7 @@ export default function Header() {
           className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-primary-foreground text-sm font-medium text-primary shadow transform transition-all duration-300 hover:scale-110 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
           prefetch={false}
         >
-          <FaGithub className="w-4 h-4" />
+          <GitHubLogoIcon className="w-4 h-4" />
         </Link>
         <Link
           href="https://www.linkedin.com/in/danielnavarrozt/"
@@ -61,7 +61,7 @@ export default function Header() {
           className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-primary-foreground text-sm font-medium text-primary shadow transform transition-all duration-300 hover:scale-110 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
           prefetch={false}
         >
-          <FaLinkedin className="w-4 h-4" />
+          <LinkedInLogoIcon className="w-4 h-4" />
         </Link>
       </div>
     </header>
