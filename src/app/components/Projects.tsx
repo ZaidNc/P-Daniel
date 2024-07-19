@@ -1,10 +1,5 @@
 import Link from "next/link";
-import {
-  HomeIcon,
-  GlobeIcon,
-  GitHubLogoIcon,
-  RocketIcon,
-} from "@radix-ui/react-icons";
+import { HomeIcon, GitHubLogoIcon, RocketIcon } from "@radix-ui/react-icons";
 import { useState } from "react";
 import { CldImage } from "next-cloudinary";
 
@@ -73,7 +68,7 @@ export default function Projects() {
                 key={proyecto.id}
                 onClick={() => setSelectedProject(proyecto)}
               >
-                <button className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium hover:bg-muted cursor-pointer">
+                <button className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium hover:bg-muted cursor-pointer transition-colors duration-300">
                   <HomeIcon className="w-5 h-5" />
                   <span>{proyecto.nombre}</span>
                 </button>
@@ -102,7 +97,7 @@ export default function Projects() {
                     crop="fill"
                     quality="auto"
                     alt={`Imagen ${index + 1}`}
-                    className="rounded-md w-full h-auto"
+                    className="rounded-md w-full h-auto transition-transform duration-300 transform hover:scale-105 hover:shadow-lg"
                   />
                 ))}
               </div>
@@ -115,7 +110,7 @@ export default function Projects() {
                     {selectedProject.tecnologias.map((tecnologia, index) => (
                       <div
                         key={index}
-                        className="bg-primary text-white px-2 py-1 rounded-full text-xs"
+                        className="bg-primary text-white px-2 py-1 rounded-full text-xs transition-colors duration-300 hover:bg-primary-dark"
                       >
                         {tecnologia}
                       </div>
@@ -123,17 +118,33 @@ export default function Projects() {
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <Link href={selectedProject.despliegueUrl} passHref>
-                    <button className="inline-flex items-center px-4 py-2 text-sm font-medium leading-5 text-white bg-primary border border-transparent rounded-md hover:bg-primary-dark">
+                  <Link
+                    href={selectedProject.despliegueUrl}
+                    passHref
+                    legacyBehavior
+                  >
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center px-4 py-2 text-sm font-medium leading-5 text-white bg-primary border border-transparent rounded-md hover:bg-primary-dark transition-colors duration-300"
+                    >
                       <RocketIcon className="w-4 h-4 mr-2" />
                       Ver Despliegue
-                    </button>
+                    </a>
                   </Link>
-                  <Link href={selectedProject.repositorioUrl} passHref>
-                    <button className="inline-flex items-center px-4 py-2 text-sm font-medium leading-5 text-white bg-primary border border-transparent rounded-md hover:bg-primary-dark">
+                  <Link
+                    href={selectedProject.repositorioUrl}
+                    passHref
+                    legacyBehavior
+                  >
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center px-4 py-2 text-sm font-medium leading-5 text-white bg-primary border border-transparent rounded-md hover:bg-primary-dark transition-colors duration-300"
+                    >
                       <GitHubLogoIcon className="w-4 h-4 mr-2" />
                       Ver Repositorio
-                    </button>
+                    </a>
                   </Link>
                 </div>
               </div>
