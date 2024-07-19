@@ -5,7 +5,6 @@ import {
   GitHubLogoIcon,
   RocketIcon,
 } from "@radix-ui/react-icons";
-
 import { useState } from "react";
 import { CldImage } from "next-cloudinary";
 
@@ -55,7 +54,7 @@ export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(proyectos[0]);
 
   return (
-    <div className="flex min-h-screen w-full flex-col ">
+    <div className="flex min-h-screen w-full flex-col">
       <div className="text-center mb-8 p-6 md:p-10 bg-muted">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
           Algunos de mis trabajos
@@ -107,32 +106,35 @@ export default function Projects() {
                   />
                 ))}
               </div>
-              <div>
-                <div className="space-y-4">
-                  <div>
-                    <h3 className="text-lg font-medium mb-2">
-                      Tecnologías Utilizadas
-                    </h3>
-                    <ul className="list-disc pl-6 text-muted-foreground">
-                      {selectedProject.tecnologias.map((tecnologia, index) => (
-                        <li key={index}>{tecnologia}</li>
-                      ))}
-                    </ul>
+              <div className="space-y-4">
+                <div>
+                  <h3 className="text-lg font-medium mb-2">
+                    Tecnologías Utilizadas
+                  </h3>
+                  <div className="flex flex-wrap gap-2 mt-2">
+                    {selectedProject.tecnologias.map((tecnologia, index) => (
+                      <div
+                        key={index}
+                        className="bg-primary text-white px-2 py-1 rounded-full text-xs"
+                      >
+                        {tecnologia}
+                      </div>
+                    ))}
                   </div>
-                  <div className="flex items-center gap-4">
-                    <Link href={selectedProject.despliegueUrl} passHref>
-                      <button className="inline-flex items-center px-4 py-2 text-sm font-medium leading-5 text-white bg-primary border border-transparent rounded-md hover:bg-primary-dark">
-                        <RocketIcon className="w-4 h-4 mr-2" />
-                        Ver Despliegue
-                      </button>
-                    </Link>
-                    <Link href={selectedProject.repositorioUrl} passHref>
-                      <button className="inline-flex items-center px-4 py-2 text-sm font-medium leading-5 text-white bg-primary border border-transparent rounded-md hover:bg-primary-dark">
-                        <GitHubLogoIcon className="w-4 h-4 mr-2" />
-                        Ver Repositorio
-                      </button>
-                    </Link>
-                  </div>
+                </div>
+                <div className="flex items-center gap-4">
+                  <Link href={selectedProject.despliegueUrl} passHref>
+                    <button className="inline-flex items-center px-4 py-2 text-sm font-medium leading-5 text-white bg-primary border border-transparent rounded-md hover:bg-primary-dark">
+                      <RocketIcon className="w-4 h-4 mr-2" />
+                      Ver Despliegue
+                    </button>
+                  </Link>
+                  <Link href={selectedProject.repositorioUrl} passHref>
+                    <button className="inline-flex items-center px-4 py-2 text-sm font-medium leading-5 text-white bg-primary border border-transparent rounded-md hover:bg-primary-dark">
+                      <GitHubLogoIcon className="w-4 h-4 mr-2" />
+                      Ver Repositorio
+                    </button>
+                  </Link>
                 </div>
               </div>
               <hr className="my-6 border-gray-200" />
