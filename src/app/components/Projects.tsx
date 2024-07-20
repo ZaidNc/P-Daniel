@@ -25,6 +25,21 @@ const proyectos = [
   },
   {
     id: 2,
+    nombre: "Kataretes",
+    descripcion:
+      "Landing page para ventas de productos hechos de mostacilla.",
+    tecnologias: [
+      "Next.js",
+      "Radix UI",
+      "Lucide Icons",
+      "Tailwind CSS",
+    ],
+    imagenes: ["Kataretess"],
+    despliegueUrl: "https://kataretes.vercel.app/",
+    repositorioUrl: "https://github.com/ZaidNc/Kataretes",
+  },
+  {
+    id: 3,
     nombre: "Pi-Dogs",
     descripcion:
       "Desarrollo de una aplicación para buscar raza de perros, filtrados por tamaño, peso, temperamento.",
@@ -34,7 +49,7 @@ const proyectos = [
     repositorioUrl: "https://github.com/ZaidNc/PI-DOGS-HENRY",
   },
   {
-    id: 3,
+    id: 4,
     nombre: "Rick and Morty App",
     descripcion:
       "Desarrollo de una aplicación para visualizar personajes de la serie Rick and Morty.",
