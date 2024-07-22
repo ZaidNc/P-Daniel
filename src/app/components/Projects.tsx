@@ -26,14 +26,8 @@ const proyectos = [
   {
     id: 2,
     nombre: "Kataretes",
-    descripcion:
-      "Landing page para ventas de productos hechos de mostacilla.",
-    tecnologias: [
-      "Next.js",
-      "Radix UI",
-      "Lucide Icons",
-      "Tailwind CSS",
-    ],
+    descripcion: "Landing page para ventas de productos hechos de mostacilla.",
+    tecnologias: ["Next.js", "Radix UI", "Lucide Icons", "Tailwind CSS"],
     imagenes: ["Kataretess"],
     despliegueUrl: "https://kataretes.vercel.app/",
     repositorioUrl: "https://github.com/ZaidNc/Kataretes",
@@ -74,7 +68,7 @@ export default function Projects() {
           de ellos refleja mi pasión por el diseño y la tecnología.
         </p>
       </div>
-      <div className="flex flex-1 w-full">
+      <div className="container mx-auto flex flex-1 w-full px-4 md:px-6">
         <aside className="bg-background border-r border-border w-64 p-6 hidden md:block">
           <h2 className="text-lg font-medium mb-4">Mis Proyectos</h2>
           <nav className="space-y-2">
