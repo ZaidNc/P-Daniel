@@ -135,7 +135,7 @@ export default function Projects() {
                     <a
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center px-4 py-2 text-sm font-medium leading-5 text-white bg-primary border border-transparent rounded-md hover:bg-primary-dark transition-colors duration-300"
+                      className="inline-flex items-center px-4 py-2 text-sm font-medium leading-5 text-white bg-[#007aff] border border-transparent rounded-full hover:bg-[#005bff] transition-colors duration-300"
                     >
                       <RocketIcon className="w-4 h-4 mr-2" />
                       Ver Despliegue
@@ -149,7 +149,7 @@ export default function Projects() {
                     <a
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center px-4 py-2 text-sm font-medium leading-5 text-white bg-primary border border-transparent rounded-md hover:bg-primary-dark transition-colors duration-300"
+                      className="inline-flex items-center px-4 py-2 text-sm font-medium leading-5 text-white bg-[#007aff] border border-transparent rounded-full hover:bg-[#005bff] transition-colors duration-300"
                     >
                       <GitHubLogoIcon className="w-4 h-4 mr-2" />
                       Ver Repositorio
