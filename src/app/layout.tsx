@@ -23,7 +23,10 @@ export default function Layout({ children }: LayoutProps) {
     <html lang="en">
       <head>
         <title>Daniel Navarro</title>
-        <meta name="description" content="Portafolio Daniel Navarro" />
+        <meta
+          name="description"
+          content="Portafolio de Daniel Navarro, Desarrollador Full Stack."
+        />
       </head>
       <body
         className={cn("antialiased", fontHeading.variable, fontBody.variable)}
