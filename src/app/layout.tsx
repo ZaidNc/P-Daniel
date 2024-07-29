@@ -21,6 +21,10 @@ interface LayoutProps {
 export default function Layout({ children }: LayoutProps) {
   return (
     <html lang="en">
+      <head>
+        <title>Daniel Navarro</title>
+        <meta name="description" content="Portafolio Daniel Navarro" />
+      </head>
       <body
         className={cn("antialiased", fontHeading.variable, fontBody.variable)}
       >
