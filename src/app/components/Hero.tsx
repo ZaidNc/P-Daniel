@@ -20,7 +20,7 @@ export default function Hero() {
             width="300"
             height="300"
             alt="Profile"
-            className="w-40 h-40 rounded-full object-cover"
+            className="w-40 h-40 rounded-full object-cover "
           />
         </div>
         <div className="text-left space-y-4 lg:flex-grow">
