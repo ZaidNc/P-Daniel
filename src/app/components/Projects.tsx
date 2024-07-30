@@ -73,14 +73,16 @@ export default function Projects() {
 
   return (
     <div className="relative min-h-screen w-full flex flex-col items-center justify-center bg-background p-4">
-      <div className="text-center mb-8">
-        <h2 className="text-3xl font-heading font-bold tracking-tighter sm:text-4xl md:text-5xl">
-          Algunos de mis trabajos
-        </h2>
-        <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-          Aquí puedes ver una selección de mis proyectos más recientes. Cada uno
-          de ellos refleja mi pasión por el diseño y la tecnología.
-        </p>
+      <div className="w-full bg-muted">
+        <div className="container mx-auto px-4 py-8 text-center">
+          <h2 className="text-3xl font-heading font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            Algunos de mis trabajos
+          </h2>
+          <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            Aquí puedes ver una selección de mis proyectos más recientes. Cada
+            uno de ellos refleja mi pasión por el diseño y la tecnología.
+          </p>
+        </div>
       </div>
 
       <div className="absolute top-1/2 left-0 transform -translate-y-1/2">
