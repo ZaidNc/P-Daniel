@@ -127,13 +127,13 @@ export function Projects() {
                   height={900}
                   src={active.imagenes[0]}
                   alt={active.nombre}
-                  className="w-full h-60 object-cover object-left"
+                  className="w-full h-100 object-cover object-left"
                 />
               </motion.div>
 
               <div>
-                <div className="flex justify-between items-start p-4">
-                  <div className="">
+                <div className="flex flex-col md:flex-row justify-between items-start p-4">
+                  <div className="flex-1">
                     <motion.h3
                       layoutId={`title-${active.nombre}-${id}`}
                       className="font-bold text-neutral-700 dark:text-neutral-200"
@@ -142,20 +142,30 @@ export function Projects() {
                     </motion.h3>
                     <motion.p
                       layoutId={`description-${active.descripcion}-${id}`}
-                      className="text-neutral-600 dark:text-neutral-400"
+                      className="text-neutral-600 dark:text-neutral-400 mb-4"
                     >
                       {active.descripcion}
                     </motion.p>
                   </div>
 
-                  <motion.a
-                    layoutId={`button-${active.nombre}-${id}`}
-                    href={active.despliegueUrl}
-                    target="_blank"
-                    className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white"
-                  >
-                    Ver Proyecto
-                  </motion.a>
+                  <div className="flex flex-col gap-4 md:flex-row md:items-center">
+                    <motion.a
+                      layoutId={`button-project-${active.nombre}-${id}`}
+                      href={active.despliegueUrl}
+                      target="_blank"
+                      className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white"
+                    >
+                      Ver Proyecto
+                    </motion.a>
+                    <motion.a
+                      layoutId={`button-repo-${active.nombre}-${id}`}
+                      href={active.repositorioUrl}
+                      target="_blank"
+                      className="px-4 py-3 text-sm rounded-full font-bold bg-blue-500 text-white"
+                    >
+                      Ver Repositorio
+                    </motion.a>
+                  </div>
                 </div>
                 <div className="pt-4 relative px-4">
                   <motion.div
@@ -191,7 +201,7 @@ export function Projects() {
                   height={900}
                   src={proyecto.imagenes[0]}
                   alt={proyecto.nombre}
-                  className="h-60 w-full rounded-lg object-cover object-left"
+                  className="h-30 w-full rounded-lg object-cover object-left"
                 />
               </motion.div>
               <div className="flex-1 p-4">
