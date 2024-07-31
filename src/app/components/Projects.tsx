@@ -82,6 +82,15 @@ export function Projects() {
 
   return (
     <>
+      <div className="text-center mb-8  p-6 md:p-10 bg-muted">
+        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+          Algunos de mis trabajos
+        </h2>
+        <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+          Aquí puedes ver una selección de mis proyectos más recientes. Cada uno
+          de ellos refleja mi pasión por el diseño y la tecnología.
+        </p>
+      </div>
       <AnimatePresence>
         {active && typeof active === "object" && (
           <motion.div
