@@ -207,7 +207,7 @@ export function Projects() {
               <div className="flex-1 p-4">
                 <motion.h3
                   layoutId={`title-${proyecto.nombre}-${id}`}
-                  className="font-medium text-neutral-800 dark:text-neutral-200 text-center md:text-left"
+                  className="font-medium text-neutral-800 dark:text-neutral-600 text-center md:text-left"
                 >
                   {proyecto.nombre}
                 </motion.h3>
