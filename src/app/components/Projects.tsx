@@ -82,7 +82,7 @@ export function Projects() {
 
   return (
     <>
-      <div className="text-center mb-8  p-6 md:p-10 bg-muted">
+      <div className="text-center mb-8 p-6 md:p-10 bg-muted">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
           Algunos de mis trabajos
         </h2>
@@ -107,19 +107,10 @@ export function Projects() {
             <motion.button
               key={`button-${active.nombre}-${id}`}
               layout
-              initial={{
-                opacity: 0,
-              }}
-              animate={{
-                opacity: 1,
-              }}
-              exit={{
-                opacity: 0,
-                transition: {
-                  duration: 0.05,
-                },
-              }}
-              className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-white rounded-full h-6 w-6"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0, transition: { duration: 0.05 } }}
+              className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-white rounded-full h-8 w-8"
               onClick={() => setActive(null)}
             >
               <CrossCircledIcon />
@@ -127,16 +118,16 @@ export function Projects() {
             <motion.div
               layoutId={`card-${active.nombre}-${id}`}
               ref={ref}
-              className="w-full max-w-[500px] h-full md:h-fit md:max-h-[90%] flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
+              className="w-full max-w-[800px] h-full md:h-fit md:max-h-[90%] flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
             >
               <motion.div layoutId={`image-${active.nombre}-${id}`}>
                 <CldImage
                   priority
-                  width={200}
-                  height={200}
+                  width={1000}
+                  height={900}
                   src={active.imagenes[0]}
                   alt={active.nombre}
-                  className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
+                  className="w-full h-60 object-cover object-left"
                 />
               </motion.div>
 
@@ -182,25 +173,28 @@ export function Projects() {
           </div>
         ) : null}
       </AnimatePresence>
-      <ul className="max-w-2xl mx-auto w-full gap-4">
+      <ul className="max-w-5xl mx-auto w-full gap-4">
         {proyectos.map((proyecto, index) => (
           <motion.div
             layoutId={`card-${proyecto.nombre}-${id}`}
             key={`card-${proyecto.nombre}-${id}`}
             onClick={() => setActive(proyecto)}
-            className="p-4 flex flex-col md:flex-row justify-between items-center hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
+            className="p-4 flex flex-col md:flex-row justify-between items-center hover:bg-white hover:bg-neutral-900 rounded-xl cursor-pointer transition-colors duration-300"
           >
-            <div className="flex gap-4 flex-col md:flex-row ">
-              <motion.div layoutId={`image-${proyecto.nombre}-${id}`}>
+            <div className="flex gap-4 flex-col md:flex-row w-full">
+              <motion.div
+                layoutId={`image-${proyecto.nombre}-${id}`}
+                className="w-full md:w-2/5"
+              >
                 <CldImage
-                  width={100}
-                  height={100}
+                  width={1000}
+                  height={900}
                   src={proyecto.imagenes[0]}
                   alt={proyecto.nombre}
-                  className="h-40 w-40 md:h-14 md:w-14 rounded-lg object-cover object-top"
+                  className="h-60 w-full rounded-lg object-cover object-left"
                 />
               </motion.div>
-              <div className="">
+              <div className="flex-1 p-4">
                 <motion.h3
                   layoutId={`title-${proyecto.nombre}-${id}`}
                   className="font-medium text-neutral-800 dark:text-neutral-200 text-center md:text-left"
@@ -219,9 +213,9 @@ export function Projects() {
               layoutId={`button-${proyecto.nombre}-${id}`}
               href={proyecto.despliegueUrl}
               target="_blank"
-              className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white hidden md:block"
+              className="px-4 py-3 text-sm rounded-full font-bold bg-white dark:bg-neutral-900 text-white hidden md:block"
             >
-              Ver Proyecto
+              Ver
             </motion.a>
           </motion.div>
         ))}
