@@ -3,7 +3,7 @@ import { CldImage } from "next-cloudinary";
 import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@/app/hooks/use-outside-click";
-import { RocketIcon } from "@radix-ui/react-icons";
+import { CrossCircledIcon } from "@radix-ui/react-icons";
 
 const proyectos = [
   {
@@ -122,7 +122,7 @@ export function Projects() {
               className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-white rounded-full h-6 w-6"
               onClick={() => setActive(null)}
             >
-              <RocketIcon />
+              <CrossCircledIcon />
             </motion.button>
             <motion.div
               layoutId={`card-${active.nombre}-${id}`}
