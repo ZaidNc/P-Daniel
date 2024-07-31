@@ -3,7 +3,6 @@ import { useState } from "react";
 import { CldImage } from "next-cloudinary";
 import { HomeIcon, GitHubLogoIcon, RocketIcon } from "@radix-ui/react-icons";
 
-const cloudName = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME;
 
 const proyectos = [
   {
