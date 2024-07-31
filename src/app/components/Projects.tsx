@@ -1,8 +1,9 @@
-import Link from "next/link";
-import { useState } from "react";
+"use client";
 import { CldImage } from "next-cloudinary";
-import { HomeIcon, GitHubLogoIcon, RocketIcon } from "@radix-ui/react-icons";
-
+import React, { useEffect, useId, useRef, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { useOutsideClick } from "@/app/hooks/use-outside-click";
+import { RocketIcon } from "@radix-ui/react-icons";
 
 const proyectos = [
   {
@@ -53,114 +54,169 @@ const proyectos = [
   },
 ];
 
-export default function Projects() {
-  const [selectedProject, setSelectedProject] = useState(proyectos[0]);
+export function Projects() {
+  const [active, setActive] = useState<
+    (typeof proyectos)[number] | boolean | null
+  >(null);
+  const ref = useRef<HTMLDivElement>(null);
+  const id = useId();
+
+  useEffect(() => {
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setActive(false);
+      }
+    }
+
+    if (active && typeof active === "object") {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [active]);
+
+  useOutsideClick(ref, () => setActive(null));
 
   return (
-    <div className="flex min-h-screen w-full flex-col">
-      <div className="text-center mb-8 p-6 md:p-10 bg-muted">
-        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-          Algunos de mis trabajos
-        </h2>
-        <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-          Aquí puedes ver una selección de mis proyectos más recientes. Cada uno
-          de ellos refleja mi pasión por el diseño y la tecnología.
-        </p>
-      </div>
-      <div className="container mx-auto flex flex-1 w-full px-4 md:px-6">
-        <aside className="bg-background border-r border-border w-64 p-6 hidden md:block">
-          <h2 className="text-lg font-medium mb-4">Mis Proyectos</h2>
-          <nav className="space-y-2">
-            {proyectos.map((proyecto) => (
-              <div
-                key={proyecto.id}
-                onClick={() => setSelectedProject(proyecto)}
-              >
-                <button className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium hover:bg-muted cursor-pointer transition-colors duration-300">
-                  <HomeIcon className="w-5 h-5" />
-                  <span>{proyecto.nombre}</span>
-                </button>
-              </div>
-            ))}
-          </nav>
-        </aside>
-        <main className="flex-1 p-6 md:p-10">
-          <div className="max-w-4xl mx-auto">
-            <div key={selectedProject.id}>
-              <div className="mb-8">
-                <h1 className="text-3xl font-bold mb-2">
-                  {selectedProject.nombre}
-                </h1>
-                <p className="text-muted-foreground">
-                  {selectedProject.descripcion}
-                </p>
-              </div>
-              <div className="mb-8">
-                {selectedProject.imagenes.map((imagen, index) => (
-                  <CldImage
-                    key={index}
-                    src={imagen}
-                    width="1000"
-                    height="500"
-                    crop="fill"
-                    quality="auto"
-                    alt={`Imagen ${index + 1}`}
-                    className="rounded-md w-full h-auto transition-transform duration-300 transform hover:scale-105 hover:shadow-lg"
-                  />
-                ))}
-              </div>
-              <div className="space-y-4">
-                <div>
-                  <h3 className="text-lg font-medium mb-2">
-                    Tecnologías Utilizadas
-                  </h3>
-                  <div className="flex flex-wrap gap-2 mt-2">
-                    {selectedProject.tecnologias.map((tecnologia, index) => (
-                      <div
-                        key={index}
-                        className="bg-primary text-white px-2 py-1 rounded-full text-xs transition-colors duration-300 hover:bg-primary-dark"
-                      >
-                        {tecnologia}
-                      </div>
-                    ))}
+    <>
+      <AnimatePresence>
+        {active && typeof active === "object" && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/20 h-full w-full z-10"
+          />
+        )}
+      </AnimatePresence>
+      <AnimatePresence>
+        {active && typeof active === "object" ? (
+          <div className="fixed inset-0 grid place-items-center z-[100]">
+            <motion.button
+              key={`button-${active.nombre}-${id}`}
+              layout
+              initial={{
+                opacity: 0,
+              }}
+              animate={{
+                opacity: 1,
+              }}
+              exit={{
+                opacity: 0,
+                transition: {
+                  duration: 0.05,
+                },
+              }}
+              className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-white rounded-full h-6 w-6"
+              onClick={() => setActive(null)}
+            >
+              <RocketIcon />
+            </motion.button>
+            <motion.div
+              layoutId={`card-${active.nombre}-${id}`}
+              ref={ref}
+              className="w-full max-w-[500px] h-full md:h-fit md:max-h-[90%] flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
+            >
+              <motion.div layoutId={`image-${active.nombre}-${id}`}>
+                <CldImage
+                  priority
+                  width={200}
+                  height={200}
+                  src={active.imagenes[0]}
+                  alt={active.nombre}
+                  className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
+                />
+              </motion.div>
+
+              <div>
+                <div className="flex justify-between items-start p-4">
+                  <div className="">
+                    <motion.h3
+                      layoutId={`title-${active.nombre}-${id}`}
+                      className="font-bold text-neutral-700 dark:text-neutral-200"
+                    >
+                      {active.nombre}
+                    </motion.h3>
+                    <motion.p
+                      layoutId={`description-${active.descripcion}-${id}`}
+                      className="text-neutral-600 dark:text-neutral-400"
+                    >
+                      {active.descripcion}
+                    </motion.p>
                   </div>
+
+                  <motion.a
+                    layoutId={`button-${active.nombre}-${id}`}
+                    href={active.despliegueUrl}
+                    target="_blank"
+                    className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white"
+                  >
+                    Ver Proyecto
+                  </motion.a>
                 </div>
-                <div className="flex items-center gap-4">
-                  <Link
-                    href={selectedProject.despliegueUrl}
-                    passHref
-                    legacyBehavior
+                <div className="pt-4 relative px-4">
+                  <motion.div
+                    layout
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
                   >
-                    <a
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center px-4 py-2 text-sm font-medium leading-5 text-white bg-[#007aff] border border-transparent rounded-full hover:bg-[#005bff] transition-colors duration-300"
-                    >
-                      <RocketIcon className="w-4 h-4 mr-2" />
-                      Ver Despliegue
-                    </a>
-                  </Link>
-                  <Link
-                    href={selectedProject.repositorioUrl}
-                    passHref
-                    legacyBehavior
-                  >
-                    <a
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center px-4 py-2 text-sm font-medium leading-5 text-white bg-[#007aff] border border-transparent rounded-full hover:bg-[#005bff] transition-colors duration-300"
-                    >
-                      <GitHubLogoIcon className="w-4 h-4 mr-2" />
-                      Ver Repositorio
-                    </a>
-                  </Link>
+                    {active.tecnologias.join(", ")}
+                  </motion.div>
                 </div>
               </div>
-              <hr className="my-6 border-gray-200" />
-            </div>
+            </motion.div>
           </div>
-        </main>
-      </div>
-    </div>
+        ) : null}
+      </AnimatePresence>
+      <ul className="max-w-2xl mx-auto w-full gap-4">
+        {proyectos.map((proyecto, index) => (
+          <motion.div
+            layoutId={`card-${proyecto.nombre}-${id}`}
+            key={`card-${proyecto.nombre}-${id}`}
+            onClick={() => setActive(proyecto)}
+            className="p-4 flex flex-col md:flex-row justify-between items-center hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
+          >
+            <div className="flex gap-4 flex-col md:flex-row ">
+              <motion.div layoutId={`image-${proyecto.nombre}-${id}`}>
+                <CldImage
+                  width={100}
+                  height={100}
+                  src={proyecto.imagenes[0]}
+                  alt={proyecto.nombre}
+                  className="h-40 w-40 md:h-14 md:w-14 rounded-lg object-cover object-top"
+                />
+              </motion.div>
+              <div className="">
+                <motion.h3
+                  layoutId={`title-${proyecto.nombre}-${id}`}
+                  className="font-medium text-neutral-800 dark:text-neutral-200 text-center md:text-left"
+                >
+                  {proyecto.nombre}
+                </motion.h3>
+                <motion.p
+                  layoutId={`description-${proyecto.descripcion}-${id}`}
+                  className="text-neutral-500 dark:text-neutral-400 hidden md:block"
+                >
+                  {proyecto.descripcion}
+                </motion.p>
+              </div>
+            </div>
+            <motion.a
+              layoutId={`button-${proyecto.nombre}-${id}`}
+              href={proyecto.despliegueUrl}
+              target="_blank"
+              className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white hidden md:block"
+            >
+              Ver Proyecto
+            </motion.a>
+          </motion.div>
+        ))}
+      </ul>
+    </>
   );
 }
