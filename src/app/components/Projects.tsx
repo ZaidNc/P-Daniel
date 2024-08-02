@@ -189,7 +189,7 @@ export function Projects() {
             layoutId={`card-${proyecto.nombre}-${id}`}
             key={`card-${proyecto.nombre}-${id}`}
             onClick={() => setActive(proyecto)}
-            className="p-4 flex flex-col md:flex-row justify-between items-center hover:bg-white hover:bg-neutral-900 rounded-xl cursor-pointer transition-colors duration-300"
+            className="p-4 flex flex-col md:flex-row justify-between items-center hover:bg-neutral-50 dark:hover:bg-neutral-900 rounded-xl cursor-pointer transition-colors duration-300"
           >
             <div className="flex gap-4 flex-col md:flex-row w-full">
               <motion.div

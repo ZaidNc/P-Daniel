@@ -7,12 +7,16 @@ import Footer from "./components/Footer";
 
 export default function Page() {
   return (
-    <div className="flex flex-col min-h-[100dvh]">
+    <div className="flex flex-col min-h-screen">
       <Header />
-      <main className="flex-1 pt-20">
+      <main className="flex-1">
         <Hero />
-        <Projects />
-        <About />
+        <section id="projects">
+          <Projects />
+        </section>
+        <section id="about">
+          <About />
+        </section>
       </main>
       <Footer />
     </div>
