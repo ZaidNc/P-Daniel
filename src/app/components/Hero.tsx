@@ -2,7 +2,6 @@ import Link from "next/link";
 import { FaGithub, FaLinkedin, FaArrowDown } from "react-icons/fa";
 import { CldImage } from "next-cloudinary";
 import { FlipWords } from "@/app/components/ui/flip-words";
-import { HoverBorderGradient } from "@/app/components/ui/hover-border-gradient";
 
 export default function Hero() {
   const words = [
@@ -58,11 +57,13 @@ export default function Hero() {
             >
               <FaLinkedin className="w-10 h-10 text-black" />
             </Link>
-            <HoverBorderGradient>
-              <a href="/CV.pdf" target="_blank" className="text-lg">
-                Descargar CV
-              </a>
-            </HoverBorderGradient>
+            <a
+              href="/CV.pdf"
+              target="_blank"
+              className="text-lg bg-blue-500 text-white py-1 px-4 rounded-full hover:bg-blue-600 transition"
+            >
+              Descargar CV
+            </a>
           </div>
         </div>
       </div>
