@@ -23,7 +23,7 @@ const proyectos = [
     despliegueUrl: "https://fast-food-front-deploy.vercel.app/",
     repositorioUrl: "https://github.com/ProyectoFinalH",
     descripcionCompleta:
-      "Descripción completa del proyecto FastFood App con todos los detalles y características adicionales."
+      "Es una aplicación desarrollada por un equipo de seis personas para facilitar la compra de alimentos de varios restaurantes en una sola plataforma. Permite a los usuarios registrarse con Google, seleccionar restaurantes y productos, pagar con MercadoPago y calificar sus compras. Los restaurantes pueden gestionar su información, actualizar menús y controlar la disponibilidad de productos, mientras que los administradores tienen control total sobre usuarios, restaurantes y productos. La aplicación está diseñada para ofrecer una experiencia fluida tanto para los usuarios como para los restaurantes y administradores."
   },
   {
     id: 2,
@@ -34,7 +34,7 @@ const proyectos = [
     despliegueUrl: "https://kataretes.vercel.app/",
     repositorioUrl: "https://github.com/ZaidNc/Kataretes",
     descripcionCompleta:
-      "Descripción completa del proyecto Kataretes con todos los detalles y características adicionales."
+      "Kataretes es una plataforma en línea dedicada a ofrecer una colección exclusiva de aretes artesanales elaborados con mostacilla. Nuestro sitio web permite a los usuarios explorar, seleccionar y comprar aretes únicos, además de conocer más sobre nuestra tienda y contactarnos directamente."
   },
   {
     id: 3,
@@ -46,7 +46,7 @@ const proyectos = [
     despliegueUrl: "https://github.com/ZaidNc/PI-DOGS-HENRY",
     repositorioUrl: "https://github.com/ZaidNc/PI-DOGS-HENRY",
     descripcionCompleta:
-      "Descripción completa del proyecto Pi-Dogs con todos los detalles y características adicionales."
+      ""
   },
   {
     id: 4,
@@ -58,7 +58,7 @@ const proyectos = [
     despliegueUrl: "https://github.com/ZaidNc/Rick-and-Morty-Frond",
     repositorioUrl: "https://github.com/ZaidNc/Rick-and-Morty-Frond",
     descripcionCompleta:
-      "Descripción completa del proyecto Rick and Morty App con todos los detalles y características adicionales."
+      ""
   }
 ];
 
