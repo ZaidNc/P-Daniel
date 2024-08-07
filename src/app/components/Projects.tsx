@@ -17,11 +17,13 @@ const proyectos = [
       "PostgreSQL",
       "React",
       "Redux",
-      "Tailwind CSS",
+      "Tailwind CSS"
     ],
     imagenes: ["FastFood"],
     despliegueUrl: "https://fast-food-front-deploy.vercel.app/",
     repositorioUrl: "https://github.com/ProyectoFinalH",
+    descripcionCompleta:
+      "Descripción completa del proyecto FastFood App con todos los detalles y características adicionales."
   },
   {
     id: 2,
@@ -31,6 +33,8 @@ const proyectos = [
     imagenes: ["Kataretess"],
     despliegueUrl: "https://kataretes.vercel.app/",
     repositorioUrl: "https://github.com/ZaidNc/Kataretes",
+    descripcionCompleta:
+      "Descripción completa del proyecto Kataretes con todos los detalles y características adicionales."
   },
   {
     id: 3,
@@ -41,6 +45,8 @@ const proyectos = [
     imagenes: ["Dogs"],
     despliegueUrl: "https://github.com/ZaidNc/PI-DOGS-HENRY",
     repositorioUrl: "https://github.com/ZaidNc/PI-DOGS-HENRY",
+    descripcionCompleta:
+      "Descripción completa del proyecto Pi-Dogs con todos los detalles y características adicionales."
   },
   {
     id: 4,
@@ -51,7 +57,9 @@ const proyectos = [
     imagenes: ["RickAndMorty"],
     despliegueUrl: "https://github.com/ZaidNc/Rick-and-Morty-Frond",
     repositorioUrl: "https://github.com/ZaidNc/Rick-and-Morty-Frond",
-  },
+    descripcionCompleta:
+      "Descripción completa del proyecto Rick and Morty App con todos los detalles y características adicionales."
+  }
 ];
 
 export function Projects() {
@@ -146,6 +154,12 @@ export function Projects() {
                     >
                       {active.descripcion}
                     </motion.p>
+                    <motion.p
+                      layoutId={`full-description-${active.descripcionCompleta}-${id}`}
+                      className="text-neutral-600 dark:text-neutral-400 mb-4"
+                    >
+                      {active.descripcionCompleta}
+                    </motion.p>
                   </div>
 
                   <div className="flex flex-col gap-4 md:flex-row md:items-center">
@@ -154,6 +168,8 @@ export function Projects() {
                       href={active.despliegueUrl}
                       target="_blank"
                       className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white"
+                      whileTap={{ scale: 0.95 }}
+                      whileHover={{ scale: 1.05 }}
                     >
                       Ver Proyecto
                     </motion.a>
@@ -162,6 +178,8 @@ export function Projects() {
                       href={active.repositorioUrl}
                       target="_blank"
                       className="px-4 py-3 text-sm rounded-full font-bold bg-blue-500 text-white"
+                      whileTap={{ scale: 0.95 }}
+                      whileHover={{ scale: 1.05 }}
                     >
                       Ver Repositorio
                     </motion.a>
@@ -173,9 +191,17 @@ export function Projects() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
+                    className="text-neutral-600 text-xs md:text-sm lg:text-base flex flex-wrap gap-2 h-40 md:h-fit pb-10 items-center overflow-auto dark:text-neutral-400"
                   >
-                    {active.tecnologias.join(", ")}
+                    <span className="font-bold">Tecnologías:</span>
+                    {active.tecnologias.map((tech, index) => (
+                      <span
+                        key={index}
+                        className="bg-gray-200 rounded-full px-3 py-1 text-sm font-medium text-gray-100 dark:bg-gray-800 dark:text-gray-300"
+                      >
+                        {tech}
+                      </span>
+                    ))}
                   </motion.div>
                 </div>
               </div>
