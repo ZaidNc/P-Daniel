@@ -82,7 +82,7 @@ export function Projects() {
 
   return (
     <>
-      <div className="text-center mb-8 p-6 md:p-10 bg-muted">
+      <div className="text-center mb-8 p-6 md:p-10 bg-muted fade-in-down">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
           Algunos de mis trabajos
         </h2>

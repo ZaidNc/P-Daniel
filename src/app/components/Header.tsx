@@ -4,7 +4,7 @@ import { CldImage } from "next-cloudinary";
 
 export default function Header() {
   return (
-    <header className="bg-primary/90 px-4 lg:px-6 h-12 flex items-center shadow-sm rounded-full fixed top-5 left-0 right-0 z-10 transition-all duration-300 max-w-2xl mx-auto w-full">
+    <header className="bg-primary/90 px-4 lg:px-6 h-12 flex items-center shadow-sm rounded-full fixed top-5 left-0 right-0 z-10 transition-all duration-300 max-w-2xl mx-auto w-full fade-in-down ">
       <Link
         href="#"
         className="flex items-center justify-center"

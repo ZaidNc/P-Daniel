@@ -22,20 +22,20 @@ export default function Hero() {
             width="360"
             height="360"
             alt="Profile"
-            className="w-48 h-48 rounded-full object-cover mx-auto lg:mx-0"
+            className="w-48 h-48 rounded-full object-cover mx-auto lg:mx-0 fade-in-down delay-100"
           />
         </div>
         <div className="text-left space-y-6 lg:flex-grow">
-          <div className="space-y-3">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+          <div className="space-y-3 delay-300">
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl fade-in-down">
               Daniel Navarro /{" "}
               <FlipWords words={words} className="text-black" />
             </h1>
-            <p className="text-muted-foreground md:text-2xl lg:text-lg xl:text-2xl">
+            <p className="text-muted-foreground md:text-2xl lg:text-lg xl:text-2xl fade-in-down">
               <strong> Desarrollador Full Stack y diseñador UI / UX </strong> de
               Colombia, Bogotá.
             </p>
-            <p className="text-muted-foreground md:text-2xl lg:text-lg xl:text-2xl">
+            <p className="text-muted-foreground md:text-2xl lg:text-lg xl:text-2xl fade-in-down">
               Con experiencia en crear soluciones digitales atractivas y
               funcionales
             </p>
@@ -44,7 +44,7 @@ export default function Hero() {
             <Link
               href="https://github.com/ZaidNc"
               target="_blank"
-              className="inline-flex items-center justify-center rounded-full bg-white text-black shadow transition-all duration-300 hover:bg-gray-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-400 disabled:pointer-events-none disabled:opacity-50 transform hover:scale-110"
+              className="inline-flex items-center justify-center rounded-full bg-white text-black shadow transition-all duration-300 hover:bg-gray-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-400 disabled:pointer-events-none disabled:opacity-50 transform hover:scale-110 fade-in-down delay-900"
               prefetch={false}
             >
               <FaGithub className="w-10 h-10 text-black" />
@@ -52,7 +52,7 @@ export default function Hero() {
             <Link
               href="https://www.linkedin.com/in/danielnavarrozt/"
               target="_blank"
-              className="inline-flex items-center justify-center rounded-full bg-white text-black shadow transition-all duration-300 hover:bg-gray-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-400 disabled:pointer-events-none disabled:opacity-50 transform hover:scale-110"
+              className="inline-flex items-center justify-center rounded-full bg-white text-black shadow transition-all duration-300 hover:bg-gray-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-400 disabled:pointer-events-none disabled:opacity-50 transform hover:scale-110 fade-in-down delay-1000"
               prefetch={false}
             >
               <FaLinkedin className="w-10 h-10 text-black" />
@@ -60,7 +60,7 @@ export default function Hero() {
             <a
               href="/CV.pdf"
               target="_blank"
-              className="text-lg bg-blue-500 text-white py-1 px-4 rounded-full hover:bg-blue-600 transition"
+              className="text-lg bg-blue-500 text-white py-1 px-4 rounded-full hover:bg-blue-600 transition fade-in-down delay-1100"
             >
               Descargar CV
             </a>

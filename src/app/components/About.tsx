@@ -65,8 +65,8 @@ const technologies = [
 
 export default function About() {
   return (
-    <section id="about" className="w-full">
-      <div className="container mx-auto px-4 md:px-6 text-center">
+    <section id="about" className="w-full fade-in-down">
+      <div className="container mx-auto px-4 md:px-6 text-center ">
         <HeroParallax products={technologies} />
       </div>
     </section>
