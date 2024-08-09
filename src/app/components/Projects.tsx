@@ -45,8 +45,7 @@ const proyectos = [
     imagenes: ["Dogs"],
     despliegueUrl: "https://github.com/ZaidNc/PI-DOGS-HENRY",
     repositorioUrl: "https://github.com/ZaidNc/PI-DOGS-HENRY",
-    descripcionCompleta:
-      ""
+    descripcionCompleta: ""
   },
   {
     id: 4,
@@ -57,8 +56,7 @@ const proyectos = [
     imagenes: ["RickAndMorty"],
     despliegueUrl: "https://github.com/ZaidNc/Rick-and-Morty-Frond",
     repositorioUrl: "https://github.com/ZaidNc/Rick-and-Morty-Frond",
-    descripcionCompleta:
-      ""
+    descripcionCompleta: ""
   }
 ];
 
@@ -126,7 +124,7 @@ export function Projects() {
             <motion.div
               layoutId={`card-${active.nombre}-${id}`}
               ref={ref}
-              className="w-full max-w-[800px] h-full md:h-fit md:max-h-[90%] flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
+              className="w-full max-w-[700px] h-full md:h-fit md:max-h-[90%] flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
             >
               <motion.div layoutId={`image-${active.nombre}-${id}`}>
                 <CldImage
@@ -140,11 +138,11 @@ export function Projects() {
               </motion.div>
 
               <div>
-                <div className="flex flex-col md:flex-row justify-between items-start p-4">
+                <div className="flex flex-col justify-between items-start p-4">
                   <div className="flex-1">
                     <motion.h3
                       layoutId={`title-${active.nombre}-${id}`}
-                      className="font-bold text-neutral-700 dark:text-neutral-200"
+                      className="font-bold text-3xl text-neutral-700 dark:text-neutral-200 mb-2"
                     >
                       {active.nombre}
                     </motion.h3>
@@ -156,7 +154,7 @@ export function Projects() {
                     </motion.p>
                     <motion.p
                       layoutId={`full-description-${active.descripcionCompleta}-${id}`}
-                      className="text-neutral-600 dark:text-neutral-400"
+                      className="text-lg text-neutral-600 dark:text-neutral-400 mb-6"
                     >
                       {active.descripcionCompleta}
                     </motion.p>
@@ -167,21 +165,21 @@ export function Projects() {
                       layoutId={`button-project-${active.nombre}-${id}`}
                       href={active.despliegueUrl}
                       target="_blank"
-                      className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white"
+                      className="inline-flex h-9 items-center justify-center rounded-full border border-input bg-background px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                       whileTap={{ scale: 0.95 }}
                       whileHover={{ scale: 1.05 }}
                     >
-                      Ver Proyecto
+                      Visitar Sitio
                     </motion.a>
                     <motion.a
                       layoutId={`button-repo-${active.nombre}-${id}`}
                       href={active.repositorioUrl}
                       target="_blank"
-                      className="px-4 py-3 text-sm rounded-full font-bold bg-blue-500 text-white"
+                      className="inline-flex h-9 items-center justify-center rounded-full border border-input bg-background px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                       whileTap={{ scale: 0.95 }}
                       whileHover={{ scale: 1.05 }}
                     >
-                      Ver Repositorio
+                      Github
                     </motion.a>
                   </div>
                 </div>
@@ -197,7 +195,7 @@ export function Projects() {
                     {active.tecnologias.map((tech, index) => (
                       <span
                         key={index}
-                        className="bg-gray-200 rounded-full px-3 py-1 text-sm font-medium text-gray-100 dark:bg-gray-800 dark:text-gray-300"
+                        className="bg-gray-200 rounded-full px-3 py-1 text-sm font-medium text-gray-100 dark:bg-neutral-800 dark:text-gray-300"
                       >
                         {tech}
                       </span>
