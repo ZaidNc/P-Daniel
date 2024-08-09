@@ -156,7 +156,7 @@ export function Projects() {
                     </motion.p>
                     <motion.p
                       layoutId={`full-description-${active.descripcionCompleta}-${id}`}
-                      className="text-neutral-600 dark:text-neutral-400 mb-4"
+                      className="text-neutral-600 dark:text-neutral-400"
                     >
                       {active.descripcionCompleta}
                     </motion.p>
