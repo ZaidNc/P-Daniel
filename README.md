@@ -10,6 +10,7 @@ Este repositorio contiene el código fuente de mi portafolio personal, diseñado
 - **Contacto**: Formulario de contacto para potenciales colaboraciones y oportunidades laborales.
 - **Currículum Vitae**: Enlace a mi currículum actualizado para más detalles sobre mi experiencia y habilidades.
 
+
 ## Tecnologías Utilizadas
 
 - **Frontend**: React.js, Next.js, Tailwind CSS
